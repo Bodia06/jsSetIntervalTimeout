@@ -1,0 +1,12 @@
+.link-text {
+	padding: 0.625rem;
+}
+
+.link-info.unlock {
+	pointer-events: none;
+}
+
+.link-info {
+	text-decoration: none;
+	color: black;
+}
