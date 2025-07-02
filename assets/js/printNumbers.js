@@ -23,15 +23,15 @@ class PrintNumber {
 	printNumbersTimeout() {
 		if (this._from <= this._to) {
 			let current = this._from
-			const timeoutId = setTimeout(function printNext() {
+			const self = this
+			function printNext() {
 				console.log(`Timeout >> ${current}`)
-				if (current < this._to) {
+				if (current < self._to) {
 					current++
-					setTimeout(printNext, this._time)
-				} else {
-					clearTimeout(timeoutId)
+					setTimeout(printNext, self._time)
 				}
-			}, this._time)
+			}
+			setTimeout(printNext, this._time)
 		} else {
 			throw new RangeError('Error range number (from <= to)')
 		}
