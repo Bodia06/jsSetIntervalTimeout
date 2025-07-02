@@ -15,11 +15,10 @@ function countTimeToLoad() {
 			linkText.classList.add('unlock')
 			if (current === 0) {
 				clearInterval(intervalId)
-				linkText.classList.remove('unlock')
 				loadText()
 				setTimeout(() => {
 					linkText.classList.remove('unlock')
-				}, 1100)
+				}, 1000)
 			}
 			current--
 		}, 1000)
